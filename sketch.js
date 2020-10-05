@@ -19,8 +19,7 @@ function setup() {
 	rectMode(CENTER);
 
 
-	engine = Engine.create();
-	world = engine.world;
+	
 	
 	packageSprite=createSprite(width/2, 80, 10,10);
 	packageSprite.addImage(packageIMG);
@@ -33,7 +32,8 @@ function setup() {
 	groundSprite=createSprite(width/2, height-35, width,10);
 	groundSprite.shapeColor=color(255);
 
-
+        engine = Engine.create();
+	world = engine.world;
 
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0, isStatic:true});
 	World.add(world, packageBody);
